@@ -19,7 +19,7 @@ jobs:
         run: |
           set +e
           for attempt in 1 2 3; do
-            HTTP=$(curl -sS -L -o /tmp/body -w "%{http_code}" --max-time 20 https://knxprofessionals.org/this-does-not-exist)
+            HTTP=$(curl -sS -L -o /tmp/body -w "%{http_code}" --max-time 20 https://knxprofessionals.org/up)
             if [ "$HTTP" = "200" ]; then
               echo "✅ Site UP (HTTP $HTTP)"
               exit 0
